@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+body
+{
+    display: flex; 
+    min-height: 100vh; 
+    background: #fffbf0;
+    font-family: 'Satisfy', cursive;
+}
+svg
+{
+   width: 100%;
+   height: 100vh;
+   padding: 30px 40px ;
+}
+
+#head,
+#Eye01,
+#Minute,
+#Hour_1,
+#tree01,
+#tree02,
+#tree03,
+#tree04,
+#tree05,
+#tree06,
+#tree07,
+#tree08
+{
+    cursor: pointer;
+    transform-box: fill-box;
+}
+
+
+#head
+{
+    animation: hand ease-in-out 1.6s infinite alternate;
+    transform-origin: bottom;   
+}
+@keyframes hand {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+
+#Eye01
+{
+    animation: blink 7s step-end infinite both;
+    transform-origin:center;
+}
+
+@keyframes blink 
+{
+  from, to, 10%, 25%, 80% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  8%, 23%, 78% {
+    -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+  }
+}
+
+
+
+
+#Minute
+{
+    animation: Hour 10s infinite linear;
+    transform-origin:bottom;
+
+}
+#Hour_1
+{
+    animation: Hour 60s infinite linear;
+    transform-origin:right;
+}
+
+@keyframes Hour 
+{
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+
+
+
+
+
+
+
+#tree01
+{
+    animation: swingreverse ease-in-out 1.5s infinite alternate;
+    transform-origin: bottom;
+}
+#tree02
+{
+    animation: swingreverse ease-in-out 1.9s infinite alternate;
+    transform-origin:right;
+}
+#tree03
+{
+    animation: swingreverse ease-in-out 1.9s infinite alternate;
+    transform-origin:left;
+}
+#tree04
+{
+    animation: swingreverse ease-in-out 1.9s infinite alternate;
+    transform-origin: top;
+}
+
+#tree05
+{
+    animation: swingreverse ease-in-out 2.5s infinite alternate;
+    transform-origin: top;
+}
+#tree06
+{
+    animation: swingreverse ease-in-out 2.5s infinite alternate;
+    transform-origin:inherit;
+}
+#tree07
+{
+    animation: swingreverse ease-in-out 2.1s infinite alternate;
+    transform-origin:top;
+}
+#tree08
+{
+    animation: swingreverse ease-in-out 2.8s infinite alternate;
+    transform-origin:top;
+}
+
+
+@keyframes swingreverse 
+{
+    0% { transform: rotate(-6deg); }
+    100% { transform: rotate(6deg); }
+}
+
+
+
+.st36
+{
+  font-family:'Satisfy', cursive !important;
+}
+
+
+svg .text {
+  width: 100%;
+  fill: transparent;
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+  stroke-dasharray: 90,310;
+  stroke-dashoffset: 0;
+  -webkit-animation: text 8s infinite linear;
+  animation: text 8s infinite linear;
+}
+
+svg .text:nth-child(4n + 1) 
+{
+  stroke:rgb(255, 95, 46);
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+svg .text:nth-child(4n + 2) 
+{
+  stroke:  #491B0B ;
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+}
+
+svg .text:nth-child(4n + 3) 
+{
+  stroke: #FBB03B;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+svg .text:nth-child(4n + 4) 
+{
+  stroke: #000;
+  -webkit-animation-delay: -8s;
+  animation-delay: -8s;
+}
+
+@keyframes text 
+{
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
